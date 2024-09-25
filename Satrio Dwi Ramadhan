@@ -1,0 +1,309 @@
+var1 = 1
+var2 = 2
+var1,var2 = var2,var1
+print (var2,var1)
+1 2
+
+var1 = 1
+var2 = 2
+var3 = 3
+var1,var2,var3 = var2,var1,var3
+print (var2,var1,var3)
+1 2 3
+
+list = [25, 21, 22, 24, 23, 27, 26]
+
+# modifikasi sesuai angka favorit anda
+
+# proses penukaran bubble sort
+lastElementIndex = len(list) - 1
+print(0, list)
+
+for idx in range(lastElementIndex):
+    if list[idx] > list[idx+1]:
+        list[idx], list[idx+1] = list[idx+1], list[idx]
+        print(idx+1, list)
+0 [25, 21, 22, 24, 23, 27, 26]
+1 [21, 25, 22, 24, 23, 27, 26]
+2 [21, 22, 25, 24, 23, 27, 26]
+3 [21, 22, 24, 25, 23, 27, 26]
+4 [21, 22, 24, 23, 25, 27, 26]
+6 [21, 22, 24, 23, 25, 26, 27]
+
+def BubbleSort(list):
+  # Exchange the elements to arrange in order
+  lastElementIndex = len(list) - 1
+
+  for passNo in range(lastElementIndex, 0, -1):
+    for idx in range(passNo):
+      if list[idx] > list[idx+1]:
+        list[idx], list[idx+1] = list[idx+1], list[idx]
+
+  return list
+list = [26,21,22,24,23,27,25]
+BubbleSort(list)
+
+list = [100, 20, 60, 90, 40, 30, 10]
+
+# modifikasi sesuai angka favorit anda
+
+# proses penukaran bubble sort
+lastElementIndex = len(list) - 1
+print(0, list)
+
+for idx in range(lastElementIndex):
+    if list[idx] > list[idx+1]:
+        list[idx], list[idx+1] = list[idx+1], list[idx]
+        print(idx+1, list)
+0 [100, 20, 60, 90, 40, 30, 10]
+1 [20, 100, 60, 90, 40, 30, 10]
+2 [20, 60, 100, 90, 40, 30, 10]
+3 [20, 60, 90, 100, 40, 30, 10]
+4 [20, 60, 90, 40, 100, 30, 10]
+5 [20, 60, 90, 40, 30, 100, 10]
+6 [20, 60, 90, 40, 30, 10, 100]
+
+def BubbleSort(list):
+  # Exchange the elements to arrange in order
+  lastElementIndex = len(list) - 1
+
+  for passNo in range(lastElementIndex, 0, -1):
+    for idx in range(passNo):
+      if list[idx] > list[idx+1]:
+        list[idx], list[idx+1] = list[idx+1], list[idx]
+
+  return list
+list = [100, 20, 60, 90, 40, 30, 10]
+
+BubbleSort(list)
+[10, 20, 30, 40, 60, 90, 100]
+
+def InsertionSort(list):
+  for i in range(1, len(list)):
+    next = list[i]
+    j = i-1
+    #Bandingkan elemen saat ini dengan elemen berikutnya (rumusnya ini janbanyak koment)
+
+    while (list[j] > next) and (j >= 0):
+      list[j+1] = list[j]
+      j -= 1
+    list[j+1] = next
+  return list
+list = [35,31,32,34,33,37,36]
+
+list
+[35, 31, 32, 34, 33, 37, 36]
+
+InsertionSort(list)
+[31, 32, 33, 34, 35, 36, 37]
+
+list = [35,31,32,34,33,37,36]
+InsertionSort(list)
+print(list)
+#Cara Mudah
+
+[31, 32, 33, 34, 35, 36, 37]
+
+def InsertionSort(list):
+  for i in range(1, len(list)):
+    next = list[i]
+    j = i-1
+    #Bandingkan elemen saat ini dengan elemen berikutnya (rumusnya ini janbanyak koment)
+
+    while (list[j] > next) and (j >= 0):
+      list[j+1] = list[j]
+      j -= 1
+    list[j+1] = next
+  return list
+list = [89,12,57,16,25,11,75]
+
+list
+[89, 12, 57, 16, 25, 11, 75]
+
+InsertionSort(list)
+[11, 12, 16, 25, 57, 75, 89]
+
+list = [89,12,57,16,25,11,75]
+InsertionSort(list)
+print(list)
+#Cara Mudah
+
+
+def SelectionSort(list):
+  for fill_slot in range(len(list) - 1, 0, -1):
+    max_index = 0
+    for location in range(1, fill_slot + 1):
+      if list[location] > list[max_index]:
+        max_index = location
+    list[fill_slot], list[max_index] = list[max_index], list[fill_slot]
+  return list
+
+list = [70, 15, 25, 19, 34, 44]
+SelectionSort(list)
+
+[15, 19, 25, 34, 44, 70]
+
+list
+[15, 19, 25, 34, 44, 70]
+
+list = [70, 15, 25, 19, 34, 44]
+SelectionSort(list)
+print(list)
+[15, 19, 25, 34, 44, 70]
+
+ def SelectionSort(list):
+  for fill_slot in range(len(list) - 1, 0, -1):
+    max_index = 0
+    for location in range(1, fill_slot + 1):
+      if list[location] > list[max_index]:
+        max_index = location
+    list[fill_slot], list[max_index] = list[max_index], list[fill_slot]
+  return list
+list = [89, 12, 57, 16, 25]
+SelectionSort(list)
+[12, 16, 25, 57, 89]
+
+list
+[12, 16, 25, 57, 89]
+
+list = [89, 12, 57, 16, 25]
+SelectionSort(list)
+print(list)
+[12, 16, 25, 57, 89]
+
+def LinearSearch(list, item):
+  index = 0
+  found = False
+
+  # Mencocokkan nilai dengan setiap elemen data
+  while index < len(list) and found is False:
+    if list[index] == item:
+      found = True
+    else:
+      index = index + 1
+
+  return found
+list = [12, 33, 11, 99, 22, 55, 90]
+print(LinearSearch(list, 12))  # Output: True
+print(LinearSearch(list, 91))  # Output: False
+
+True
+False
+
+def LinearSearch(list, item):
+  index = 0
+  found = False
+
+  # Mencocokkan nilai dengan setiap elemen data
+  while index < len(list) and found is False:
+    if list[index] == item:
+      found = True
+    else:
+      index = index + 1
+
+  return found
+ list = ['y', 'u', 'i', 'w', 'o', 'a', 'q','u','j','p']
+print(LinearSearch(list, 'y'))  # Output: True
+print(LinearSearch(list, 'a'))  # Output: False
+ list = ['y', 'u', 'i', 'w', 'o', 'a', 'q','u','j','p']
+print(LinearSearch(list, 'y'))  # Output: True
+print(LinearSearch(list, 'a'))  # Output: False
+True
+True
+
+def BinarySearch(list, item):
+  first = 0
+  last = len(list)-1
+  found = False
+
+  while first <= last and not found:
+    midpoint = (first + last)//2
+    if list[midpoint] == item:
+      found = True
+    else:
+      if item < list[midpoint]:
+        last = midpoint-1
+      else:
+        first = midpoint+1
+  return found
+list = [12, 33, 11, 99, 22, 55, 90]
+sorted_list = BubbleSort(list)  # Asumsikan BubbleSort sudah didefinisikan
+print(BinarySearch(list, 12))  # Output: True
+print(BinarySearch(list, 91))  # Output: False
+True
+False
+
+def BinarySearch(list, item):
+  first = 0
+  last = len(list)-1
+  found = False
+
+  while first <= last and not found:
+    midpoint = (first + last)//2
+    if list[midpoint] == item:
+      found = True
+    else:
+      if item < list[midpoint]:
+        last = midpoint-1
+      else:
+        first = midpoint+1
+  return found
+list = ['y', 'u', 'i', 'w', 'o', 'a', 'q','u','j','p']
+sorted_list = BubbleSort(list)  # Asumsikan BubbleSort sudah didefinisikan
+print(BinarySearch(list, 'y'))  # Output: True
+print(BinarySearch(list, 'a'))  # Output: False
+True
+True
+
+def IntPolSearch(list, x):
+  idx0 = 0
+  idxn = (len(list) - 1)
+  found = False
+  while idx0 <= idxn and x >= list[idx0] and x <= list[idxn]:
+    # Temukan titik tengahnya
+    mid = idx0 + int(((float(idxn - idx0) / (list[idxn] - list[idx0])) * (x - list[idx0])))
+    # Bandingkan nilai di titik tengah dengan nilai pencarian
+    if list[mid] == x:
+      found = True
+      return found
+    if list[mid] < x:
+      idx0 = mid + 1
+    else:
+      idxn = mid - 1
+  return found
+list = [12, 33, 11, 99, 22, 55, 90]
+sorted_list = BubbleSort(list)  # Asumsikan BubbleSort sudah didefinisikan
+print(IntPolSearch(list, 12))  # Output: True
+print(IntPolSearch(list, 91))  # Output: False
+True
+False
+
+def IntPolSearch(list, x):
+  idx0 = 0
+  idxn = (len(list) - 1)
+  found = False
+
+  # Periksa apakah daftar diurutkan dan hanya berisi angka
+  if all(isinstance(item, (int, float)) for item in list) and list == sorted(list):
+    while idx0 <= idxn and x >= list[idx0] and x <= list[idxn]:
+
+      # Temukan titik tengahnya
+      mid = idx0 + int(((float(idxn - idx0) / (list[idxn] - list[idx0])) * (x - list[idx0])))
+
+      # Bandingkan nilai di titik tengah dengan nilai pencarian
+      if list[mid] == x:
+        found = True
+        return found
+      if list[mid] < x:
+        idx0 = mid + 1
+      else:
+        idxn = mid - 1
+    return found
+  else:
+    return False # Kembalikan False untuk daftar non-numerik atau tidak diurutkan
+list = ['y', 'u', 'i', 'w', 'o', 'a', 'q','u','j','p']
+sorted_list = BubbleSort(list)
+print(IntPolSearch(list, 'y'))
+print(IntPolSearch(list, 'u'))
+False
+False
